@@ -7,8 +7,8 @@ This sample switches general agent and Car AI Agent (registered as tool in gener
 ## Scenario
 
 You can ask general inqueires
-- Weather
-- 
+- Weather (will invoke function calling)
+- Car Control (will invoke Car Agent with associated tools)
 
 You can find the assistant definitions at [assistants.ts](./src//assistants.ts).
 See all tools set for each assistant to understand what each assistant can do, or modify as you need.

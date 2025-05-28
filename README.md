@@ -2,18 +2,13 @@
 
 This repo contains a node sample application that uses AOAI Realtime Audio endpoint. See more detail about the SDK at [AOAI Realtime Audio SDK](https://github.com/Azure-Samples/aoai-realtime-audio-sdk)
 
-This sample switches multiple assistants (system prompt + tools set) seamlessly depending on your intent.
+This sample switches general agent and Car AI Agent (registered as tool in general agent for seemless switching)
 
 ## Scenario
 
-You can ask about mobile service, such as 
-
+You can ask general inqueires
 - Weather
-- Mobile phone billing
-- Mobile phoen current plan
-- Mobile phone options
-- Consulation on usage
-- Mobile phoe store related question, etc.
+- 
 
 You can find the assistant definitions at [assistants.ts](./src//assistants.ts).
 See all tools set for each assistant to understand what each assistant can do, or modify as you need.
@@ -66,13 +61,13 @@ For example, the generic assistant has following function calling definition.
 
 ```typescript
 {
-    name: 'Assistant_MobileAssistant',
-    description: 'Help user to answer mobile related question, such as billing, contract, etc.',
+    name: 'Assistant_CarAssistant',
+    description: 'Help user to control car features such as AC, Media.',
     parameters: {
         type: 'object',
         properties: {}
     },
-    returns: async (arg: string) => "Assistant_MobileAssistant"
+    returns: async (arg: string) => "Assistant_CarAssistant"
 }
 ```
 
